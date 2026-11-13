@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Αγωνιστικό ημερολόγιο – Όμιλος Μπριτζ Ηρακλείου</title>
+<meta name="description" content="Το αγωνιστικό πρόγραμμα του Ομίλου Μπριτζ Ηρακλείου για το 2026: διοργανώσεις του Ομίλου, πανελλήνιες διοργανώσεις, φεστιβάλ και αργίες, ως ατζέντα ή ως ημερολόγιο.">
+<link rel="canonical" href="https://program.heraklion-bridge.gr/">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Αγωνιστικό ημερολόγιο – Όμιλος Μπριτζ Ηρακλείου">
+<meta property="og:description" content="Διοργανώσεις, πανελλήνια πρωταθλήματα, φεστιβάλ και αργίες του 2026.">
+<meta property="og:image" content="https://program.heraklion-bridge.gr/assets/logo.png">
+<meta property="og:url" content="https://program.heraklion-bridge.gr/">
+<script>try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #eef4fa; --card: #fff; --ink: #14283b; --head: #22262a; --muted: #5e7587;
+  --line: #e3eaf0; --border: #c7d4de; --soft: #f0f4f7; --hover: #f2f5f8;
+  --link: #0b4a7b; --link-hover: #1d68a3; --accent: #0b4a7b; --accent-soft: rgba(11, 74, 123, .1);
+  --focus: #3b8bc9; --shadow: 0 1px 2px rgba(41, 51, 61, .12);
+  --today: #fff3c4; --today-ink: #6b4e00;
+  /* κατηγορίες: d = χρώμα, b = φόντο, f = γράμματα */
+  --omh-d: #e0a800;     --omh-b: #fff0b8;     --omh-f: #5c4300;
+  --qual-d: #1b7f3b;    --qual-b: #dff3e5;    --qual-f: #125c2b;
+  --student-d: #7b4fc4; --student-b: #ece4f8; --student-f: #4f2d8c;
+  --pan-d: #1d68a3;     --pan-b: #dcebf8;     --pan-f: #0b4a7b;
+  --other-d: #c0392b;   --other-b: #fbe4e2;   --other-f: #8f2419;
+  --holiday-d: #7d93a4; --holiday-b: #e8edf1; --holiday-f: #3d5162;
+  --font: -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e1620; --card: #182431; --ink: #e3ecf4; --head: #f1f6fb; --muted: #9db2c3;
+  --line: #2a3a4a; --border: #3b4f63; --soft: #1f2e3d; --hover: #223244;
+  --link: #86bfee; --link-hover: #b4d8f6; --accent: #1d68a3; --accent-soft: rgba(125, 185, 236, .14);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .45);
+  --today: #473a17; --today-ink: #f0c36d;
+  --omh-d: #e8b92e;     --omh-b: #4a3b12;     --omh-f: #f5d57a;
+  --qual-d: #46b872;    --qual-b: #173824;    --qual-f: #8ee0aa;
+  --student-d: #a37ee6; --student-b: #33284d; --student-f: #cdb8f3;
+  --pan-d: #4a9be0;     --pan-b: #1c3a57;     --pan-f: #a3cff3;
+  --other-d: #ff7d6e;   --other-b: #4a2321;   --other-f: #ffa79d;
+  --holiday-d: #8399ab; --holiday-b: #2a3a4a;   --holiday-f: #bccddb;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font); font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--bg); }
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.sr { position: absolute; left: -999px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px 48px; }
+.ico { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* κεφαλίδα */
+.top { background: var(--card); box-shadow: 0 1px 0 var(--line); margin-bottom: 20px; }
+.top .wrap { display: flex; align-items: center; gap: 14px; padding-top: 14px; padding-bottom: 14px; }
+.top img { width: 48px; height: 48px; border-radius: 50%; flex: none; }
+.top h1 { margin: 0; font-size: 22px; line-height: 1.2; color: var(--head); font-weight: 650; }
+.top p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+.top .grow { flex: 1; min-width: 0; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; border: 0; background: none; color: var(--ink); }
+.icon-btn:hover { background: var(--hover); }
+.icon-btn .i-sun { display: none; }
+:root[data-theme="dark"] .icon-btn .i-sun { display: block; }
+:root[data-theme="dark"] .icon-btn .i-moon { display: none; }
+
+/* «τώρα» */
+.now { background: var(--card); border-radius: 12px; box-shadow: var(--shadow); padding: 12px 16px; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 15px; }
+.now:empty { display: none; }
+.now b { color: var(--head); }
+.now .lbl { color: var(--muted); }
+
+/* εργαλεία */
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin-bottom: 12px; }
+.seg { display: inline-flex; background: var(--card); border-radius: 10px; box-shadow: inset 0 0 0 1px var(--border); padding: 3px; }
+.seg button { border: 0; background: none; padding: 7px 16px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.seg button:not([aria-pressed="true"]):hover { background: var(--hover); color: var(--ink); }
+.search { flex: 1 1 200px; min-width: 160px; position: relative; max-width: 340px; }
+.search input { width: 100%; padding: 9px 12px 9px 38px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); }
+.search .ico { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-weight: 600; text-decoration: none; color: var(--link); }
+.btn:hover { background: var(--hover); color: var(--link-hover); }
+.btn.ml { margin-left: auto; }
+
+/* φίλτρα */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px 5px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); font-size: 14px; }
+.chip i { width: 12px; height: 12px; border-radius: 50%; background: var(--d); flex: none; }
+.chip[aria-pressed="false"] { opacity: .5; text-decoration: line-through; }
+.chip[aria-pressed="false"] i { background: transparent; box-shadow: inset 0 0 0 2px var(--d); }
+.chip:hover { background: var(--hover); }
+.check { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); margin-left: auto; cursor: pointer; }
+
+.c-omh { --d: var(--omh-d); --b: var(--omh-b); --f: var(--omh-f); }
+.c-qual { --d: var(--qual-d); --b: var(--qual-b); --f: var(--qual-f); }
+.c-student { --d: var(--student-d); --b: var(--student-b); --f: var(--student-f); }
+.c-pan { --d: var(--pan-d); --b: var(--pan-b); --f: var(--pan-f); }
+.c-other { --d: var(--other-d); --b: var(--other-b); --f: var(--other-f); }
+.c-holiday { --d: var(--holiday-d); --b: var(--holiday-b); --f: var(--holiday-f); }
+
+/* ατζέντα */
+.month { margin: 0 0 22px; }
+.month > h2 { position: sticky; top: 0; z-index: 5; margin: 0; padding: 10px 16px; font-size: 17px; color: var(--head); background: var(--bg); box-shadow: 0 1px 0 var(--line); text-transform: uppercase; letter-spacing: .04em; }
+.month > h2 small { font-weight: 400; color: var(--muted); text-transform: none; letter-spacing: 0; margin-left: 8px; }
+.ev-list { list-style: none; margin: 8px 0 0; padding: 0; background: var(--card); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+.ev { display: grid; grid-template-columns: 92px 1fr auto; gap: 4px 16px; align-items: center; padding: 12px 16px; border-left: 5px solid var(--d); }
+.ev + .ev { border-top: 1px solid var(--line); }
+.ev .when { line-height: 1.2; }
+.ev .when b { display: block; font-size: 20px; color: var(--head); font-variant-numeric: tabular-nums; }
+.ev .when span { font-size: 13px; color: var(--muted); }
+.ev .what { min-width: 0; }
+.ev .what strong { font-weight: 600; color: var(--head); overflow-wrap: anywhere; }
+.ev .what .note { font-size: 14px; color: var(--muted); }
+.tag { display: inline-block; margin-left: 8px; padding: 0 8px; border-radius: 999px; background: var(--soft); box-shadow: inset 0 0 0 1px var(--border); font-size: 13px; font-weight: 600; color: var(--muted); vertical-align: 1px; }
+.kind { display: inline-block; padding: 2px 10px; border-radius: 999px; background: var(--b); color: var(--f); font-size: 13px; font-weight: 600; white-space: nowrap; }
+.ev.past { opacity: .55; }
+.ev.now-on { background: var(--accent-soft); }
+.ev.next { box-shadow: inset 0 0 0 2px var(--focus); border-radius: 0; }
+.ev .badge { display: inline-block; margin-left: 8px; padding: 0 8px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; vertical-align: 1px; }
+.empty { background: var(--card); border-radius: 12px; padding: 28px; text-align: center; color: var(--muted); }
+.holiday-row .when b { color: var(--muted); }
+
+/* ημερολόγιο */
+.cal-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.cal-head h2 { margin: 0 8px; font-size: 22px; flex: 1; color: var(--head); }
+.cal-head .icon-btn { background: var(--card); box-shadow: inset 0 0 0 1px var(--border); }
+.cal-head .icon-btn:hover { background: var(--hover); }
+.cal-head .icon-btn:disabled { opacity: .35; cursor: default; }
+.grid { background: var(--card); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+.dow, .week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.dow div { padding: 8px 6px; text-align: center; font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; background: var(--soft); }
+.dow div:nth-child(n+6) { color: var(--ink); }
+.day { all: unset; box-sizing: border-box; display: block; cursor: pointer; min-height: 96px; padding: 4px 0 6px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); min-width: 0; overflow: visible; }
+.day:nth-child(7n+1) { border-left: 0; }
+.day:hover { background: var(--hover); }
+.day:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
+.day.out { background: var(--soft); }
+.day.out .num { opacity: .45; }
+.day.sel { background: var(--accent-soft); box-shadow: inset 0 0 0 2px var(--accent); }
+.day.wkend:not(.sel):not(.out) { background: color-mix(in srgb, var(--soft) 55%, var(--card)); }
+.num { display: block; padding: 0 6px 3px; font-size: 14px; font-weight: 600; color: var(--ink); }
+.day.today .num span { display: inline-block; min-width: 24px; text-align: center; padding: 0 4px; border-radius: 999px; background: var(--accent); color: #fff; }
+.pill { pointer-events: none; display: block; height: 22px; margin: 0 4px 3px; padding: 0 6px; border-radius: 6px; background: var(--b); color: var(--f); font-size: 12px; font-weight: 600; line-height: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-shadow: inset 3px 0 0 var(--d); position: relative; }
+.pill.gap { background: none; box-shadow: none; }
+.pill.cl { margin-left: -1px; border-top-left-radius: 0; border-bottom-left-radius: 0; box-shadow: none; }
+.pill.cr { margin-right: -1px; border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.pill.cl, .pill.cr { z-index: 1; }
+.pill.blank { color: transparent; }
+.pill.wide { width: calc(100% * var(--n) + var(--n) * 1px - 2 * var(--m, 4px) - 1px); z-index: 2; }
+.pill.past { opacity: .72; }
+.detail { margin-top: 14px; }
+.detail h3 { margin: 0 0 8px; font-size: 16px; color: var(--head); }
+.legend-note { margin: 10px 2px 0; font-size: 13px; color: var(--muted); }
+
+footer { margin-top: 30px; text-align: center; font-size: 14px; color: var(--muted); }
+footer a { margin: 0 6px; }
+
+@media (max-width: 640px) {
+  .top h1 { font-size: 18px; }
+  .top img { width: 40px; height: 40px; }
+  .ev { grid-template-columns: 70px 1fr; padding: 10px 12px; }
+  .ev .kind { grid-column: 2; justify-self: start; }
+  .ev .when b { font-size: 17px; }
+  .day { min-height: 66px; }
+  .num { padding: 0 4px 2px; font-size: 13px; }
+  .pill { height: 7px; margin: 0 2px 3px; padding: 0; font-size: 0; line-height: 0; border-radius: 4px; box-shadow: none; background: var(--d); }
+  .pill { --m: 2px; }
+  .pill.cl { margin-left: -1px; } .pill.cr { margin-right: -1px; }
+  .dow div { font-size: 11px; padding: 6px 0; }
+  .btn.ml { margin-left: 0; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  .top .icon-btn, .tools, .chips, .now, .cal-head .icon-btn, footer a, .check { display: none !important; }
+  .month > h2 { position: static; background: none; }
+  .ev-list { box-shadow: none; border: 1px solid #999; }
+  .ev { break-inside: avoid; }
+  .ev.past { opacity: 1; }
+  #cal { display: none !important; }
+  #agenda { display: block !important; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="https://www.heraklion-bridge.gr/" aria-label="Όμιλος Μπριτζ Ηρακλείου"><img src="assets/logo.png" alt=""></a>
+    <div class="grow">
+      <h1 id="ttl">Αγωνιστικό ημερολόγιο ΟΜΗ</h1>
+      <p>Όμιλος Μπριτζ Ηρακλείου</p>
+    </div>
+    <button class="icon-btn" id="theme" type="button" aria-label="Αλλαγή θέματος (φωτεινό / σκούρο)" title="Φωτεινό / σκούρο θέμα">
+      <svg class="ico i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+      <svg class="ico i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <noscript><p class="empty">Για να δείτε το ημερολόγιο χρειάζεται JavaScript. Μπορείτε να δείτε το <a href="https://docs.google.com/document/d/1PSPIT5EFHJ-2LHEcHccVhTfUHuR3NOjB/pub">πρόγραμμα ως έγγραφο</a>.</p></noscript>
+
+  <div class="now" id="now" aria-live="polite"></div>
+
+  <div class="tools">
+    <div class="seg" role="group" aria-label="Προβολή">
+      <button type="button" id="v-agenda" aria-pressed="true">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>Ατζέντα</button>
+      <button type="button" id="v-cal" aria-pressed="false">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>Ημερολόγιο</button>
+    </div>
+    <label class="search">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <span class="sr">Αναζήτηση διοργάνωσης</span>
+      <input type="search" id="q" placeholder="Αναζήτηση, π.χ. Ομάδες" autocomplete="off">
+    </label>
+    <button class="btn" type="button" id="today"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg>Σήμερα</button>
+    <button class="btn ml" type="button" id="ics" title="Λήψη αρχείου .ics για Google Calendar, Apple Calendar, Outlook">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Προσθήκη στο ημερολόγιό μου</button>
+  </div>
+
+  <div class="chips" id="chips" role="group" aria-label="Φίλτρα κατηγορίας"></div>
+
+  <section id="agenda" aria-label="Ατζέντα"></section>
+
+  <section id="cal" aria-label="Ημερολόγιο" hidden>
+    <div class="cal-head">
+      <button class="icon-btn" type="button" id="prev" aria-label="Προηγούμενος μήνας"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <h2 id="mname" aria-live="polite"></h2>
+      <button class="icon-btn" type="button" id="next" aria-label="Επόμενος μήνας"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="grid">
+      <div class="dow" aria-hidden="true"><div>Δευ</div><div>Τρι</div><div>Τετ</div><div>Πεμ</div><div>Παρ</div><div>Σαβ</div><div>Κυρ</div></div>
+      <div id="weeks"></div>
+    </div>
+    <p class="legend-note">Πατήστε μια ημέρα για να δείτε τις διοργανώσεις της.</p>
+    <div class="detail" id="detail"></div>
+  </section>
+
+  <footer>
+    <a href="https://www.heraklion-bridge.gr/">Όμιλος Μπριτζ Ηρακλείου</a> ·
+    <a href="https://learn.heraklion-bridge.gr/">Μάθε μπριτζ</a> ·
+    <a href="https://docs.google.com/document/d/1PSPIT5EFHJ-2LHEcHccVhTfUHuR3NOjB/pub">Πρόγραμμα ως έγγραφο</a>
+  </footer>
+</main>
+
+<script src="events.js"></script>
+<script>
+(function () {
+  'use strict';
+  var MONTHS = ['Ιανουάριος','Φεβρουάριος','Μάρτιος','Απρίλιος','Μάιος','Ιούνιος','Ιούλιος','Αύγουστος','Σεπτέμβριος','Οκτώβριος','Νοέμβριος','Δεκέμβριος'];
+  var MONTHS_G = ['Ιανουαρίου','Φεβρουαρίου','Μαρτίου','Απριλίου','Μαΐου','Ιουνίου','Ιουλίου','Αυγούστου','Σεπτεμβρίου','Οκτωβρίου','Νοεμβρίου','Δεκεμβρίου'];
+  var MON_SHORT = ['Ιαν','Φεβ','Μαρ','Απρ','Μαΐ','Ιουν','Ιουλ','Αυγ','Σεπ','Οκτ','Νοε','Δεκ'];
+  var DAYS = ['Κυριακή','Δευτέρα','Τρίτη','Τετάρτη','Πέμπτη','Παρασκευή','Σάββατο'];
+  var DAYS_S = ['Κυρ','Δευ','Τρι','Τετ','Πεμ','Παρ','Σαβ'];
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* ---- ημερομηνίες: «ΕΕΕΕ-ΜΜ-ΗΗ» ως ημερομηνία στο τοπικό ωράριο ---- */
+  function parse(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function iso(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  function addDays(d, n) { return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+  function dayDiff(a, b) { return Math.round((b - a) / 864e5); }
+  var now = new Date();
+  var TODAY = iso(now);
+
+  var events = EVENTS.map(function (x, i) {
+    return { id: i, s: x.d, e: x.e || x.d, t: x.t, c: x.c, tag: x.tag || '', n: x.n || '' };
+  }).sort(function (a, b) { return a.s < b.s ? -1 : a.s > b.s ? 1 : a.e > b.e ? -1 : a.e < b.e ? 1 : a.id - b.id; });
+
+  /* ---- κατάσταση ---- */
+  var cats = Object.keys(CATEGORIES);
+  var state = { view: 'agenda', month: null, sel: null, hidden: {}, hidePast: false, q: '' };
+  try { var v = localStorage.getItem('program-view'); if (v === 'agenda' || v === 'cal') state.view = v; } catch (e) {}
+
+  var first = events[0].s.slice(0, 7), last = events.reduce(function (m, x) { return x.e > m ? x.e : m; }, '').slice(0, 7);
+  function clampMonth(m) { return m < first ? first : m > last ? last : m; }
+  state.month = clampMonth(TODAY.slice(0, 7));
+
+  function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+  function visible(x) {
+    if (state.hidden[x.c]) return false;
+    if (state.hidePast && x.e < TODAY) return false;
+    if (state.q && norm(x.t + ' ' + x.tag + ' ' + x.n + ' ' + CATEGORIES[x.c].label).indexOf(norm(state.q)) < 0) return false;
+    return true;
+  }
+  function visibleEvents() { return events.filter(visible); }
+
+  /* ---- μορφοποίηση ---- */
+  function whenParts(x) {
+    var a = parse(x.s), b = parse(x.e);
+    if (x.s === x.e) return { big: String(a.getDate()), small: DAYS[a.getDay()] };
+    var big = a.getMonth() === b.getMonth() ? a.getDate() + '–' + b.getDate() : a.getDate() + ' ' + MON_SHORT[a.getMonth()] + ' –';
+    var small = a.getMonth() === b.getMonth() ? DAYS_S[a.getDay()] + ' – ' + DAYS_S[b.getDay()] : b.getDate() + ' ' + MON_SHORT[b.getMonth()];
+    return { big: big, small: small };
+  }
+  function rangeText(x) {
+    var a = parse(x.s), b = parse(x.e);
+    if (x.s === x.e) return DAYS[a.getDay()] + ' ' + a.getDate() + ' ' + MONTHS_G[a.getMonth()];
+    if (a.getMonth() === b.getMonth()) return a.getDate() + '–' + b.getDate() + ' ' + MONTHS_G[a.getMonth()];
+    return a.getDate() + ' ' + MONTHS_G[a.getMonth()] + ' – ' + b.getDate() + ' ' + MONTHS_G[b.getMonth()];
+  }
+  function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+
+  function eventRow(x) {
+    var li = el('li', 'ev c-' + x.c + (x.c === 'holiday' ? ' holiday-row' : ''));
+    var p = whenParts(x);
+    var w = el('div', 'when'); w.appendChild(el('b', '', p.big)); w.appendChild(el('span', '', p.small));
+    var what = el('div', 'what'), st = el('strong', '', x.t);
+    what.appendChild(st);
+    if (x.tag) what.appendChild(el('span', 'tag', x.tag));
+    if (x.s <= TODAY && x.e >= TODAY) { li.classList.add('now-on'); what.appendChild(el('span', 'badge', 'Σε εξέλιξη')); }
+    if (x.n) what.appendChild(el('div', 'note', x.n));
+    li.appendChild(w); li.appendChild(what); li.appendChild(el('span', 'kind', CATEGORIES[x.c].label));
+    if (x.e < TODAY) li.classList.add('past');
+    return li;
+  }
+
+  /* ---- «τώρα» ---- */
+  function renderNow() {
+    var box = $('now'); box.textContent = '';
+    var t = parse(TODAY);
+    var inYear = TODAY >= events[0].s.slice(0, 4) + '-01-01' && TODAY <= last + '-31';
+    if (!inYear) return;
+    var on = events.filter(function (x) { return x.c !== 'holiday' && x.s <= TODAY && x.e >= TODAY; });
+    var nx = events.filter(function (x) { return x.c !== 'holiday' && x.s > TODAY; })[0];
+    var a = el('div'); a.appendChild(el('span', 'lbl', 'Σήμερα, ' + DAYS[t.getDay()] + ' ' + t.getDate() + ' ' + MONTHS_G[t.getMonth()] + ': '));
+    a.appendChild(el('b', '', on.length ? on.map(function (x) { return x.t; }).join(' · ') : 'καμία διοργάνωση'));
+    box.appendChild(a);
+    if (nx) {
+      var d = dayDiff(t, parse(nx.s)), b = el('div');
+      b.appendChild(el('span', 'lbl', 'Επόμενη: '));
+      b.appendChild(el('b', '', nx.t));
+      b.appendChild(el('span', 'lbl', ' – ' + rangeText(nx) + (d === 1 ? ' (αύριο)' : ' (σε ' + d + ' ημέρες)')));
+      box.appendChild(b);
+    }
+  }
+
+  /* ---- φίλτρα ---- */
+  function renderChips() {
+    var box = $('chips'); box.textContent = '';
+    cats.forEach(function (k) {
+      var b = el('button', 'chip c-' + k); b.type = 'button';
+      b.setAttribute('aria-pressed', state.hidden[k] ? 'false' : 'true');
+      b.appendChild(el('i')); b.appendChild(document.createTextNode(CATEGORIES[k].label));
+      b.onclick = function () { state.hidden[k] = !state.hidden[k]; render(); };
+      box.appendChild(b);
+    });
+    var lab = el('label', 'check'), cb = el('input'); cb.type = 'checkbox'; cb.checked = state.hidePast;
+    cb.onchange = function () { state.hidePast = cb.checked; render(); };
+    lab.appendChild(cb); lab.appendChild(document.createTextNode('Απόκρυψη παρελθόντων'));
+    box.appendChild(lab);
+  }
+
+  /* ---- ατζέντα ---- */
+  function renderAgenda() {
+    var host = $('agenda'); host.textContent = '';
+    var list = visibleEvents();
+    if (!list.length) { host.appendChild(el('p', 'empty', 'Δεν βρέθηκαν διοργανώσεις με αυτά τα φίλτρα.')); return; }
+    var nextId = null;
+    for (var i = 0; i < list.length; i++) if (list[i].e >= TODAY) { nextId = list[i].id; break; }
+    var byMonth = {};
+    list.forEach(function (x) { (byMonth[x.s.slice(0, 7)] = byMonth[x.s.slice(0, 7)] || []).push(x); });
+    Object.keys(byMonth).sort().forEach(function (m) {
+      var sec = el('div', 'month'), y = +m.slice(0, 4), mi = +m.slice(5) - 1;
+      var h = el('h2', '', MONTHS[mi]); h.appendChild(el('small', '', String(y)));
+      sec.id = 'm-' + m; sec.appendChild(h);
+      var ul = el('ul', 'ev-list');
+      byMonth[m].forEach(function (x) {
+        var li = eventRow(x);
+        if (x.id === nextId) li.classList.add('next');
+        li.dataset.id = x.id; ul.appendChild(li);
+      });
+      sec.appendChild(ul); host.appendChild(sec);
+    });
+  }
+
+  /* ---- ημερολόγιο ---- */
+  function monthStart(m) { return new Date(+m.slice(0, 4), +m.slice(5) - 1, 1); }
+  function renderCal() {
+    var ms = monthStart(state.month);
+    $('mname').textContent = MONTHS[ms.getMonth()] + ' ' + ms.getFullYear();
+    $('prev').disabled = state.month <= first; $('next').disabled = state.month >= last;
+    var lead = (ms.getDay() + 6) % 7, start = addDays(ms, -lead);
+    var weeks = Math.ceil((lead + new Date(ms.getFullYear(), ms.getMonth() + 1, 0).getDate()) / 7);
+    var list = visibleEvents(), host = $('weeks'); host.textContent = '';
+    for (var w = 0; w < weeks; w++) {
+      var ws = addDays(start, w * 7), we = addDays(ws, 6), wsI = iso(ws), weI = iso(we);
+      var evs = list.filter(function (x) { return x.s <= weI && x.e >= wsI; });
+      var lanes = [];                                    /* κάθε διοργάνωση παίρνει σταθερή «λωρίδα» όλη την εβδομάδα */
+      evs.forEach(function (x) {
+        var a = Math.max(0, dayDiff(ws, parse(x.s))), b = Math.min(6, dayDiff(ws, parse(x.e))), L = 0;
+        while (lanes[L] && lanes[L].some(function (r) { return !(b < r.a || a > r.b); })) L++;
+        (lanes[L] = lanes[L] || []).push({ x: x, a: a, b: b });
+      });
+      var row = el('div', 'week');
+      for (var d = 0; d < 7; d++) {
+        var date = addDays(ws, d), di = iso(date);
+        var cell = el('button', 'day' + (date.getMonth() !== ms.getMonth() ? ' out' : '') + (di === TODAY ? ' today' : '') + (di === state.sel ? ' sel' : '') + (d > 4 ? ' wkend' : ''));
+        cell.type = 'button'; cell.dataset.date = di;
+        var n = el('span', 'num'); n.appendChild(el('span', '', String(date.getDate()))); cell.appendChild(n);
+        var count = 0;
+        lanes.forEach(function (lane) {
+          var r = lane.filter(function (q) { return q.a <= d && q.b >= d; })[0];
+          if (!r) { cell.appendChild(el('span', 'pill gap')); return; }
+          count++;
+          var x = r.x, isStart = x.s === di, isEnd = x.e === di, isLead = d === r.a;
+          var span = r.b - d + 1, wide = isLead && span > 1;
+          var p = el('span', 'pill c-' + x.c + (x.e < TODAY ? ' past' : '') + (!isStart ? ' cl' : '') + ((wide ? x.e > weI : !isEnd && d !== 6) ? ' cr' : ''));
+          if (wide) { p.classList.add('wide'); p.style.setProperty('--n', span); }
+          p.textContent = x.t + (x.tag ? ' · ' + x.tag : '');
+          if (!isLead) p.classList.add('blank');
+          cell.appendChild(p);
+        });
+        var names = list.filter(function (x) { return x.s <= di && x.e >= di; }).map(function (x) { return x.t; });
+        cell.setAttribute('aria-label', DAYS[date.getDay()] + ' ' + date.getDate() + ' ' + MONTHS_G[date.getMonth()] + (names.length ? ': ' + names.join(', ') : ': καμία διοργάνωση'));
+        cell.onclick = function () { state.sel = this.dataset.date; renderCal(); renderDetail(); };
+        row.appendChild(cell);
+      }
+      host.appendChild(row);
+    }
+    renderDetail();
+  }
+  function renderDetail() {
+    var box = $('detail'); box.textContent = '';
+    if (!state.sel) return;
+    var d = parse(state.sel), list = visibleEvents().filter(function (x) { return x.s <= state.sel && x.e >= state.sel; });
+    box.appendChild(el('h3', '', DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MONTHS_G[d.getMonth()] + ' ' + d.getFullYear()));
+    if (!list.length) { box.appendChild(el('p', 'empty', 'Καμία διοργάνωση αυτή την ημέρα.')); return; }
+    var ul = el('ul', 'ev-list'); list.forEach(function (x) { ul.appendChild(eventRow(x)); }); box.appendChild(ul);
+  }
+
+  /* ---- προβολές ---- */
+  function setHash() {
+    try { history.replaceState(null, '', state.view === 'cal' ? '#calendar=' + state.month : '#agenda'); } catch (e) {}
+  }
+  function render() {
+    var isCal = state.view === 'cal';
+    $('agenda').hidden = isCal; $('cal').hidden = !isCal;
+    $('v-agenda').setAttribute('aria-pressed', String(!isCal)); $('v-cal').setAttribute('aria-pressed', String(isCal));
+    renderChips();
+    if (isCal) renderCal(); else renderAgenda();
+    setHash();
+  }
+  function setView(v) {
+    state.view = v;
+    try { localStorage.setItem('program-view', v); } catch (e) {}
+    render();
+    if (v === 'agenda') scrollToNext(false); else window.scrollTo(0, 0);
+  }
+  function scrollToNext(smooth) {
+    var n = document.querySelector('.ev.next') || document.querySelector('.month');
+    if (n) { var y = n.getBoundingClientRect().top + window.pageYOffset - 130; window.scrollTo({ top: Math.max(0, y), behavior: smooth ? 'smooth' : 'auto' }); }
+  }
+
+  $('v-agenda').onclick = function () { setView('agenda'); };
+  $('v-cal').onclick = function () { setView('cal'); };
+  $('prev').onclick = function () { var d = monthStart(state.month); d.setMonth(d.getMonth() - 1); state.month = clampMonth(iso(d).slice(0, 7)); renderCal(); setHash(); };
+  $('next').onclick = function () { var d = monthStart(state.month); d.setMonth(d.getMonth() + 1); state.month = clampMonth(iso(d).slice(0, 7)); renderCal(); setHash(); };
+  $('today').onclick = function () {
+    if (state.view === 'cal') { state.month = clampMonth(TODAY.slice(0, 7)); state.sel = TODAY; renderCal(); setHash(); } else scrollToNext(true);
+  };
+  $('q').oninput = function () { state.q = this.value.trim(); render(); };
+  $('theme').onclick = function () {
+    var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    try { localStorage.setItem('theme', t); } catch (e) {}
+  };
+
+  /* ---- αρχείο .ics (διοργανώσεις ολόκληρης ημέρας, όσες φαίνονται με τα τρέχοντα φίλτρα) ---- */
+  function esc(s) { return s.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n'); }
+  function compact(s) { return s.replace(/-/g, ''); }
+  $('ics').onclick = function () {
+    var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+    var out = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Heraklion Bridge Club//Program//EL', 'CALSCALE:GREGORIAN',
+      'X-WR-CALNAME:' + esc(CALENDAR_TITLE)];
+    visibleEvents().forEach(function (x) {
+      var desc = [CATEGORIES[x.c].label].concat(x.n ? [x.n] : []).join(' – ');
+      out.push('BEGIN:VEVENT', 'UID:program-' + x.s + '-' + x.id + '@program.heraklion-bridge.gr', 'DTSTAMP:' + stamp,
+        'DTSTART;VALUE=DATE:' + compact(x.s), 'DTEND;VALUE=DATE:' + compact(iso(addDays(parse(x.e), 1))),
+        'SUMMARY:' + esc(x.t + (x.tag ? ' (' + x.tag + ')' : '')), 'DESCRIPTION:' + esc(desc), 'TRANSP:TRANSPARENT', 'END:VEVENT');
+    });
+    out.push('END:VCALENDAR');
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([out.join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' }));
+    a.download = 'omh-agonistiko-imerologio.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+  };
+
+  /* ---- εκκίνηση ---- */
+  document.title = CALENDAR_TITLE.replace('ΟΜΗ', 'ΟΜΗ') + ' – Όμιλος Μπριτζ Ηρακλείου';
+  $('ttl').textContent = CALENDAR_TITLE;
+  var h = location.hash;
+  if (h.indexOf('#calendar') === 0) {
+    state.view = 'cal';
+    var m = /=(\d{4}-\d{2})/.exec(h); if (m) state.month = clampMonth(m[1]);
+  } else if (h === '#agenda') state.view = 'agenda';
+  if (state.view === 'cal' && state.month === TODAY.slice(0, 7)) state.sel = TODAY;
+  renderNow();
+  render();
+  if (state.view === 'agenda' && !h) {
+    try { history.scrollRestoration = 'manual'; } catch (e) {}
+    var go = function () { scrollToNext(false); };
+    go(); window.addEventListener('load', function () { setTimeout(go, 50); });
+  }
+})();
+</script>
+</body>
+</html>
